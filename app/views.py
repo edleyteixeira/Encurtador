@@ -5,4 +5,8 @@ def home(request):
 
 def faq(request):
     return render(request, 'app/faq.html')
+
+def contato(request):
+    return render(request, 'app/contato.html')
+    
     

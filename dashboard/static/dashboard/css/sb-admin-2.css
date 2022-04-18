@@ -11281,3 +11281,5 @@ body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
 
+.bg-1{background-color: #2d2d29;} .bg-2{background-color: #215a6d;} .bg-3{background-color: #3ca2a2;} .bg-4{background-color: #92c7a3;} .bg-5{background-color: #dfece6;}
+.txt-1{color: #2d2d29!important;} .txt-2{color: #215a6d!important;} .txt-3{color: #3ca2a2!important;} .txt-4{color: #92c7a3!important;} .txt-5{color: #dfece6!important;}
