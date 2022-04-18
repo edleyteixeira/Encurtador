@@ -1,3 +1,7 @@
+from atexit import register
 from django.contrib import admin
+from .models import urlEncurtHome
 
-# Register your models here.
+@admin.register(urlEncurtHome)
+class UrlHome(admin.ModelAdmin):
+    list_display = ('id', 'urlr', 'slug')
