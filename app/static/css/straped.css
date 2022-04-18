@@ -1,6 +1,9 @@
-/*RESET CSS
-*{margin: 0; padding: 0; display: block; border: 0; font-size: 100%; } */
-
-
-.w-100{width: 100%;} .w-95{width: 95%;} .w-90{width: 90%;}.w-85{width: 85%;}.w-80{width: 80%;}.w-75{width: 75%;}.w-70{width: 70%;}.w-65{width: 65%;}.w-60{width: 60%;}.w-55{width: 55%;}.w-50{width: 5
-    0%;}.w-90{width: 90%;}.w-90{width: 90%;}.w-90{width: 90%;}.w-90{width: 90%;}.w-90{width: 90%;}.w-90{width: 90%;}
+.w-100{width: 100%;} .w-95{width: 95%;} .w-90{width: 90%;}.w-85{width: 85%;}.w-80{width: 80%;}.w-75{width: 75%;}.w-70{width: 70%;}.w-65{width: 65%;}.w-60{width: 60%;}.w-55{width: 55%;}.w-50{width: 50%;}.w-45{width: 45%;}.w-40{width: 40%;}.w-35{width: 35%;}.w-30{width: 30%;}.w-25{width: 25%;}.w-20{width: 20%;}.w-15{width: 15%;}.w-10{width: 10%;}.w-5{width: 5%;}
+.p-1{padding: 1%;} .p-2{padding: 2%;} .p-3{padding: 3%;} .p-4{padding: 4%;} .p-5{padding: 5%;} .pb-1{padding-bottom: 1%;} .pb-2{padding-bottom: 2%;} .pb-3{padding-bottom: 3%;}.pb-4{padding-bottom: 4%;} .pb-5{padding-bottom: 5%;}
+.bg-one{background-color: #9450f4;} .bg-two{background-color: #f2ae1b;}
+.m-auto{margin: auto;} .m-0{margin: 0;}
+.d-block{display: block;} .d-none{display: none;} .d-flex{display: flex;} 
+.flex-row{flex-direction: row;} .flex-rowr{flex-direction: row-reverse ;} .flex-column{flex-direction: column;} .flex-columnr{flex-direction: column-reverse;} .flex-wrap{flex-wrap: wrap;}
+.f-start{justify-content: start;} .f-end{justify-content: end;} .f-center{justify-content: center;} .f-betweem{justify-content: space-between;} .f-around{justify-content: space-around;} .f-evenly{justify-content: space-evenly;}
+.fs-05{font-size: 0.5em;} .fs-06{font-size: 0.6em;} .fs-1{font-size: 1em;} .fs-15{font-size: 1.5em;}
+.txt-white{color: white;} .txt-black{color: black;} 
