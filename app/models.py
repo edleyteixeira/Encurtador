@@ -13,6 +13,9 @@ class Pixel(models.Model):
     def __str__(self):
         return self.name
     
+
+
+
     
 class Encurtadas(models.Model):
     id = models.AutoField(primary_key=True,verbose_name='id')
@@ -23,4 +26,4 @@ class Encurtadas(models.Model):
     
     def __str__(self):
         return self.urlr
-
+    
