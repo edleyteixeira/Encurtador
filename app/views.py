@@ -1,8 +1,28 @@
+from secrets import choice
 from django.shortcuts import render
-from app.models import urlEncurtHome
+from app.models import Encurtadas
+
+from .forms import Encurtar
+import random, string
+
+
 
 def home(request):
-    return render(request, 'app/home.html')
+    if request.method == 'POST':
+        form = Encurtar(request.POST)
+        if form.is_valid():
+            url_encurtada = form.cleaned_data['url_original']
+            slug = random.choice(string.ascii_letters)+ random.choice(string.ascii_letters)+ random.choice(string.ascii_letters)+ random.choice(string.ascii_letters)+ random.choice(string.ascii_letters)+ random.choice(string.ascii_letters)+ random.choice(string.ascii_letters)
+            context = {
+            'slug' : slug,
+            'form' : Encurtar()
+            }
+            print(slug)
+    context = {
+        
+        'form' : Encurtar()
+    }
+    return render(request, 'app/home.html', context)
 
 def faq(request):
     return render(request, 'app/faq.html')
@@ -11,7 +31,7 @@ def contato(request):
     return render(request, 'app/contato.html')
     
 def url(request, url):
-    redirect = urlEncurtHome.objects.filter(slug=url)
+    redirect = Encurtadas.objects.filter(slug=url)
     
     context = {
         'redirect': redirect
