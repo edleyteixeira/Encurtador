@@ -5,7 +5,7 @@ class Pixel(models.Model):
     plataform = (
         ("facebook", "Facebook"),
         ("google", "Google"))
-    plataforma = models.CharField(max_length=10 , choices=plataform, blank=False, verbose_name='plataforma')
+    plataforma = models.CharField(max_length=10 , choices=plataform, blank=False, verbose_name='PIXEL')
     pixel_id = models.CharField(max_length=30, verbose_name='id do pixel', blank=False)
     name = models.CharField(max_length=100, verbose_name='Nome do Pixel', blank=False)
     #user = models.ForeignKey(EmailAddress, on_delete=models.CASCADE)
