@@ -72,7 +72,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
   <a class="button secondaryAction txt-5" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-  <a class="button secondaryAction txt-5" href="{% url 'account_signup' %}">{% trans "Signup" %}</a>
+  <a class="button secondaryAction txt-5" href="{% url 'dashboard:cadastro' %}">{% trans "Signup" %}</a>
   <button class="rounded-pill bg-2 mt-2 mb-3 shadow" type="submit">{% trans "Sign In" %}</button>
 </form>
 </div>
