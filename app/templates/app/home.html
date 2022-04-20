@@ -8,15 +8,35 @@
     <div class="p-2 bd-highlight text-center mt-2">
         <h1 class="f-one">Encurtador grátis com pixel</h1>
     </div>
+{% if not slug  %}
 
     <form class=" d-flex flex-column p-2 bd-highlight justify-content-center" method="post" action="{% url 'app:home' %}">
         {% csrf_token %}
-        <div class="input-group mb-3">
+        <div class=" m-auto input-group mb-3 w-50">
             <span class="bg-1 txt-5 p-2 rounded-start" id="basic-addon1"><i class="bi bi-link-45deg"></i></span>
             {{form.url_original}}
         </div>  
-        <button class=" bg-1 w-75 rounded-pill p-1 txt-5 f-one m-auto">ENCURTAR</button>        
+        <button class=" bg-1 w-50 rounded-pill p-1 txt-5 f-one m-auto">ENCURTAR</button>        
     </form>
+    {% else %}
+    <script>
+        function copiarTexto() {
+            let textoCopiado = document.getElementById("url");
+            textoCopiado.select();
+            textoCopiado.setSelectionRange(0, 99999)
+            document.execCommand("copy");
+            alert("O texto é: " + textoCopiado.value);}
+    </script>
+    <div class=" d-flex flex-column p-2 bd-highlight justify-content-center">
+        <div class="m-auto input-group mb-3 w-25">
+            <input type="text" class="form-control" id="url" name="url" value="https://encur.tk/{{slug}}" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" disable>
+            <button  onclick="copiarTexto()" class="input-group-text" id="basic-addon1"><i class="bi bi-journals"></i></button>
+        </div>                
+    </div>
+    
+   
+    
+{% endif %}
     <div class="p-2 bd-highlight text-center"><p><a class="t-link txt-2" href="{% url 'account_signup' %}">Cadastre-se </a> para ter acesso a todas as funcionalidades</p<</div>
   </div>
 

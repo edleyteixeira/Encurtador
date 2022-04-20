@@ -40,8 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     
     #3rd party
-    'app',
-    'dashboard',
+    'app.apps.AppConfig',
+    'dashboard.apps.DashboardConfig',
     'allauth',
     'allauth.account',
     'allauth.socialaccount'
