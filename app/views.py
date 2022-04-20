@@ -35,13 +35,12 @@ def contato(request):
     return render(request, 'app/contato.html')
     
 def url(request, url):
-    redirect = Encurtadas.objects.filter(slug=url)
-    redirect
-    
-        
+    acessos = Encurtadas.objects.get(slug=url)
+    acessos.acessos = acessos.acessos + 1
+    acessos.save()
 
     context = {
-        'redirect': redirect,
+        'redirect': acessos,
         
     }
     return render(request, 'app/redirect.html', context)
