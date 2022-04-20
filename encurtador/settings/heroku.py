@@ -1,6 +1,6 @@
 import environ
 
-from encurtador.settings import *
+from encurtador.settings.settings import *
 
 env = environ.Env()
 
