@@ -20,3 +20,9 @@ def login(request):
     }
     return render(request, 'dashboard/login.html', context)
 
+def register(request):
+    context= {
+        'form': SignupForm()
+    }
+    return render(request, 'dashboard/register.html', context)
+
