@@ -18,6 +18,10 @@ def login(request):
     }
     return render(request, 'dashboard/login.html', context)
 
+def cadastro(request):
+    return render(request, 'dashboard/register.html')
+
+
 def addurl(request):
     if request.method == "POST":
         form = userID(request.POST)
