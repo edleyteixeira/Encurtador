@@ -16,7 +16,7 @@
 
 {% load i18n %}
  <body>
-<h1>{% block head_title %}{% trans "Signup" %}{% endblock %}</h1>
+<h1 class="visually-hidden">{% block head_title %}{% trans "Signup" %}{% endblock %}</h1>
 
 {% block content %}
 <h1>{% trans "Sign Up" %}</h1>
@@ -32,24 +32,28 @@
       <span class="bg-4 input-group-text" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
       {{form.username}}
   </div>
+  <p class=" text-center bg-opacity-25 text-danger">{{form.username.errors}}<p>
   <div class="input-group mb-3 ">
       <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
       {{form.email}}
+      <p>{{form.email.errors}}<p>
   </div>
   <div class="input-group mb-3">
       <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
-      {{form.email2}}    
+      {{form.email2}}   
   </div>
-
+  <p class=" text-center bg-opacity-25 text-danger">{{form.email2.errors}}<p>
   <div class="input-group mb-3">
       <span class="input-group-text" id="basic-addon1"><i class="bi bi-key-fill"></i></span>
       {{form.password1}}
   </div>
+  <p class=" text-center bg-opacity-25 text-danger">{{form.password1.errors}}<p>
 
   <div class="input-group mb-3">
       <span class="input-group-text" id="basic-addon1"><i class="bi bi-key-fill"></i></span>
       {{form.password2}}
   </div>
+  <p class=" text-center bg-opacity-25 text-danger">{{form.password2.errors}}<p>
   <button type="submit" class="bg-2 txt-5 w-100 rounded-pill border-0 p-2 shadow">Cadastrar</button>
 </form>
 

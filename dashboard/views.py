@@ -19,7 +19,10 @@ def login(request):
     return render(request, 'dashboard/login.html', context)
 
 def cadastro(request):
-    return render(request, 'dashboard/register.html')
+    context = {
+        'form' : SignupForm()
+    }
+    return render(request, 'dashboard/register.html', context)
 
 
 def addurl(request):
