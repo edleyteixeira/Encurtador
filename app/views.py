@@ -20,7 +20,7 @@ def home(request):
             'slug' : slug,
             'form' : Encurtar()
             }
-            return render(request, 'app/home.html', context)
+            return render(request, 'templates/app/home.html', context)
     else:
         context = {
     
