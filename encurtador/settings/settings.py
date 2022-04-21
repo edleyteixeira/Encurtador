@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'dashboard.apps.DashboardConfig',
     'allauth',
     'allauth.account',
-    'allauth.socialaccount'
+    'allauth.socialaccount',
 ]
 
 MIDDLEWARE = [

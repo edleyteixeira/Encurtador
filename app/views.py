@@ -1,4 +1,3 @@
-from itertools import count
 from django.shortcuts import render
 from app.models import Encurtadas
 
