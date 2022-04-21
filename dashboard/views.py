@@ -1,15 +1,11 @@
 from multiprocessing import context
 from django.shortcuts import render
 from allauth.account.forms import (
-    AddEmailForm,
-    ChangePasswordForm,
     LoginForm,
-    ResetPasswordForm,
-    ResetPasswordKeyForm,
-    SetPasswordForm,
     SignupForm,
-    UserTokenForm,
 )
+
+from app.models import *
 
 def home(request):
     return render(request, 'dashboard/home.html')
