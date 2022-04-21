@@ -1,6 +1,7 @@
 
 from django.shortcuts import render
 from dashboard.forms import userID
+from app.models import Encurtadas
 from allauth.account.forms import (
     LoginForm,
     SignupForm,
@@ -21,7 +22,8 @@ def addurl(request):
     if request.method == "POST":
         form = userID(request.POST)
         if form.is_valid():
-            print(form.cleaned_data['id_user'])
+           links = Encurtadas.objects.get(user_id=form.cleaned_data['id_user'])
+           print(links)
         
     context = {
         'form': userID()

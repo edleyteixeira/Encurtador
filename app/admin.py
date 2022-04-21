@@ -3,8 +3,8 @@ from .models import Pixel, Encurtadas
 
 @admin.register(Encurtadas)
 class EncurtadasAdmin(admin.ModelAdmin):
-    list_display = ('id', 'urlr', 'slug', 'plataform', 'acessos')
-    list_display_links = ('id', 'urlr', 'slug')
+    list_display = ('id', 'urlr', 'slug', 'plataform', 'acessos', 'user')
+    list_display_links = ('id',  'slug')
     
     
 @admin.register(Pixel)

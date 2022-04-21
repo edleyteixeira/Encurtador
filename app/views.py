@@ -1,3 +1,4 @@
+from itertools import count
 from django.shortcuts import render
 from app.models import Encurtadas
 
@@ -35,13 +36,13 @@ def contato(request):
     return render(request, 'app/contato.html')
     
 def url(request, url):
-    print(url)
-    acessos = Encurtadas.objects.get(slug=url)
+    
+    acessos = Encurtadas.objects.filter(slug=url).get()
     acessos.acessos = acessos.acessos + 1
     acessos.save()
 
     context = {
-        'redirect': acessos,
+       'redirect': acessos,
         
     }
     return render(request, 'app/redirect.html', context)
