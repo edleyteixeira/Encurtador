@@ -5,7 +5,13 @@ class Pixel(models.Model):
     plataform = (
         ("facebook", "Facebook"),
         ("google", "Google"))
-    plataforma = models.CharField(max_length=10 , choices=plataform, blank=False, verbose_name='PIXEL')
+    events = (
+        ("pageview", "PageView"),
+        ("checkout", "InitiateCheckout"),
+        ("addtocart", "AddToCart"),
+        ("viewcontent", "ViewContent"))
+    evento = models.CharField(max_length=10 , choices=plataform, blank=False, verbose_name='Pixel')
+    plataforma = models.CharField(max_length=20 , choices=events, blank=False, verbose_name='Evento')
     pixel_id = models.CharField(max_length=30, verbose_name='id do pixel', blank=True, null=True)
     name = models.CharField(max_length=100, verbose_name='Nome do Pixel', blank=True, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
