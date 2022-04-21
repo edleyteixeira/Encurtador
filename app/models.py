@@ -7,9 +7,7 @@ class Pixel(models.Model):
         ("google", "Google"))
     events = (
         ("pageview", "PageView"),
-        ("checkout", "InitiateCheckout"),
-        ("addtocart", "AddToCart"),
-        ("viewcontent", "ViewContent"))
+        ("checkout", "InitiateCheckout"))
     evento = models.CharField(max_length=10 , choices=plataform, blank=False, verbose_name='Pixel')
     plataforma = models.CharField(max_length=20 , choices=events, blank=False, verbose_name='Evento')
     pixel_id = models.CharField(max_length=30, verbose_name='id do pixel', blank=True, null=True)

@@ -35,6 +35,7 @@ def contato(request):
     return render(request, 'app/contato.html')
     
 def url(request, url):
+    print(url)
     acessos = Encurtadas.objects.get(slug=url)
     acessos.acessos = acessos.acessos + 1
     acessos.save()
