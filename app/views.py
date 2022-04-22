@@ -19,7 +19,7 @@ def home(request):
             'slug' : slug,
             'form' : Encurtar()
             }
-            return render(request, 'templates/app/home.html', context)
+            return render(request, 'app/home.html', context)
     else:
         context = {
     
@@ -35,14 +35,14 @@ def contato(request):
     return render(request, 'app/contato.html')
     
 def url(request, url):
-    
-    acessos = Encurtadas.objects.filter(slug=url).get()
-    acessos.acessos = acessos.acessos + 1
-    acessos.save()
-
-    context = {
-       'redirect': acessos,
-        
-    }
-    return render(request, 'app/redirect.html', context)
+    if url:
+        acessos = Encurtadas.objects.filter(slug=url).get()
+        acessos.acessos = acessos.acessos + 1
+        acessos.save()
+        context = {
+        'redirect': acessos,
+            
+        }
+        return render(request, 'app/redirect.html', context)
+    return render(request, 'app/redirect.html')
     

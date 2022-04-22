@@ -43,9 +43,9 @@ INSTALLED_APPS = [
     #3rd party
     'app.apps.AppConfig',
     'dashboard.apps.DashboardConfig',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
+    #'allauth',
+    #'allauth.account',
+    #'allauth.socialaccount',
 ]
 
 MIDDLEWARE = [
@@ -138,19 +138,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-SITE_ID = 1
-LOGIN_REDIRECT_URL = '/minhaconta/'
-ACCOUNT_AUTHENTICATION_METHOD='username_email'
-ACCOUNT_SIGNUP_REDIRECT_URL = '/minhaconta/'
-ACCOUNT_EMAIL_REQUIRED=True
-ACCOUNT_SESSION_REMEMBER = True
-ACCOUNT_LOGOUT_REDIRECT_URL = '/minhaconta/'
-ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
-ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
-ACCOUNT_USERNAME_BLACKLIST =[ 'admin','administrador']
-ACCOUNT_UNIQUE_EMAIL = True
-
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
